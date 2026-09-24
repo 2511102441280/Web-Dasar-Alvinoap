@@ -4,6 +4,153 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Halaman Profil Bandung</title>
+
+  <!-- CSS ditulis di sini supaya semuanya ada dalam satu file -->
+  <style>
+    /* ===== Pengaturan dasar ===== */
+    * {
+      box-sizing: border-box; /* padding tidak menambah lebar elemen */
+    }
+
+    html {
+      scroll-behavior: smooth; /* klik menu -> halaman meluncur halus */
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background-color: #eef3ee;
+    }
+
+    /* ===== Header ===== */
+    header {
+      background-color: #250c70;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 42px;
+    }
+
+    header p {
+      margin: 0 auto;
+      max-width: 600px;
+    }
+
+    /* ===== Menu navigasi ===== */
+    nav {
+      background-color: #5a31e4;
+    }
+
+    nav ul {
+      list-style: none; /* hilangkan titik daftar */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      display: block;
+      padding: 14px 24px;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #250c70;
+    }
+
+    /* ===== Bagian utama: artikel di kiri, samping di kanan ===== */
+    main {
+      display: flex;
+      gap: 24px;
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    article {
+      flex: 3; /* artikel mengambil 3 bagian */
+      background-color: white;
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    aside {
+      flex: 1; /* samping mengambil 1 bagian */
+      background-color: white;
+      padding: 24px;
+      border-radius: 8px;
+      text-align: center;
+      align-self: flex-start; /* tinggi mengikuti isi, tidak ikut memanjang */
+    }
+
+    /* ===== Isi artikel ===== */
+    article h2 {
+      color: #2f6f4f;
+      border-bottom: 2px solid #250c70;
+      padding-bottom: 6px;
+      margin-top: 40px;
+    }
+
+    article h3 {
+      color: #245a40;
+      margin-bottom: 8px;
+    }
+
+    article img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover; /* gambar dipotong rapi, tidak gepeng */
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+
+    article p {
+      text-align: justify;
+    }
+
+    /* ===== Isi samping ===== */
+    aside h3 {
+      margin-top: 0;
+      color: #250c70;
+    }
+
+    aside img {
+      width: 150px;
+    }
+
+    aside figcaption {
+      font-style: italic;
+      color: #666;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background-color: #250c70;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* ===== Tampilan layar kecil (HP) ===== */
+    @media (max-width: 700px) {
+      main {
+        flex-direction: column; /* artikel dan samping jadi atas-bawah */
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -29,7 +176,7 @@
     <!-- Konten artikel -->
     <article>
 
-      <img id="sejarah" src="history.jpg" alt="Sejarah Kota Bandung" width="20%">
+      <img id="sejarah" src="history.jpg" alt="Sejarah Kota Bandung">
 
       <p>Kata Bandung berasal dari kata bendung atau bendungan karena terbendungnya sungai
         Citarum oleh lava Gunung Tangkuban Parahu yang lalu membentuk telaga. Legenda yang
@@ -46,7 +193,7 @@
         Sinonim dari banda adalah harta. Indung berarti Ibu atau Bumi, disebut juga sebagai Ibu
         Pertiwi tempat Banda berada.</p>
 
-      <img id="geografis" src="geografis.jpg" alt="Kondisi geografis Kota Bandung" width="20%">
+      <img id="geografis" src="geografis.jpg" alt="Kondisi geografis Kota Bandung">
 
       <p>Kota Bandung dikelilingi oleh pegunungan, sehingga bentuk morfologi wilayahnya bagaikan
         sebuah mangkok raksasa,[9] secara geografis kota ini terletak di tengah-tengah provinsi
@@ -68,14 +215,14 @@
         sejumlah besar bangunan lama berarsitektur peninggalan Belanda.</p>
 
       <h3>Farm House Lembang</h3>
-      <img src="farm-house.jpg" alt="Farm House Lembang" width="20%">
+      <img src="farm-house.jpg" alt="Farm House Lembang">
       <p>Berada di jalur utama Bandung-Lembang, Farm House menjadi objek wisata yang tidak
         pernah sepi pengunjung. Selain karena letaknya strategis, kawasan ini juga
         menghadirkan nuansa wisata khas Eropa. Semua itu diterapkan dalam bentuk spot swafoto
         Instagramable.</p>
 
       <h3>Observatorium Bosscha</h3>
-      <img src="bosscha.jpg" alt="Observatorium Bosscha" width="20%">
+      <img src="bosscha.jpg" alt="Observatorium Bosscha">
       <p>Memiliki beberapa teleskop, antara lain, Refraktor Ganda Zeiss, Schmidt Bimasakti,
         Refraktor Bamberg, Cassegrain GOTO, dan Teleskop Surya. Refraktor Ganda Zeiss adalah
         jenis teleskop terbesar untuk meneropong bintang. Benda ini diletakkan pada atap kubah
@@ -92,7 +239,7 @@
       <h3>Kota Bandung</h3>
       <p>Kota Kembang Paris van Java</p>
       <figure>
-        <img src="bandung-badge.png" alt="Lambang Kota Bandung" width="5%">
+        <img src="bandung-badge.png" alt="Lambang Kota Bandung">
         <figcaption>Lambang</figcaption>
       </figure>
     </aside>
