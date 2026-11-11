@@ -58,4 +58,4 @@ console.log(dataMhs6); // ["Revino", "Jovino", "Davino", "Elvino"]
 
 // fungsi indexOf untuk mencari index dari data array
 let index = dataMhs.indexOf("Jovino");
-console.log(index); // 1 
+console.log(index); // 4
