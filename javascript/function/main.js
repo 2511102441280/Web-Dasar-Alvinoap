@@ -43,17 +43,17 @@ const hasil = nilai2(10); // memanggil function dengan nilai default
 console.log(hasil); // 20
 
 // function dengan rest parameter
-function sum(...nilai) {
-    return nilai.reduce((total, num) => total + num, 0);
+function sum(...angka) {
+    return angka.reduce((total, num) => total + num, 0);
 }
 
 const total = sum(1, 2, 3, 4, 5); // memanggil function dengan rest parameter
 console.log(total); // 15
 
- // function dengan callback
-//  function inputData(callback) {
-//     const nama = prompt('Masukkan nama mahasiswa:');
-//     callback(nama);
+// function dengan callback
+// function inputData(callback) {
+//    const nama = prompt('Masukkan nama mahasiswa:');
+//    callback(nama);
 // }
 
 // inputData(function(nama) { // memanggil function dengan callback
@@ -68,7 +68,7 @@ function outerFunction(outerVariable) {
 }
 
 outerFunction("outside")("inside"); // memanggil function dengan closure
-//innerFunction("inside"); // memanggil function dengan closure(error karena innerFunction tidak dapat diakses dari luar outerFunction)
+// innerFunction("inside"); // memanggil function dengan closure(error karena innerFunction tidak dapat diakses dari luar outerFunction)
 
 // function dengan IIFE (Immediately Invoked Function Expression)
 (function() {
@@ -118,7 +118,7 @@ console.log(generator.next().value); // 3
 
 // function dengan method
 const mhs = {
-    nama: 'ELVino',
+    nama: 'Alvino',
 
     dataMhs(){
         console.log(`Nama mahasiswa: ${this.nama}`);
